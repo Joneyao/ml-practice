@@ -11,9 +11,9 @@
 | A1 | 别急着建模：一份真实数据能有多脏 | `data_cleaning/explore.py` | Titanic | 已完成待发布 |
 | A2 | 缺失值不是删掉就完事：填补策略的代价 | `data_cleaning/imputation.py` | Titanic | 已完成待发布 |
 | A3 | 异常值：噪声，还是真实的极端情况？ | `data_cleaning/outliers.py` | House Prices (Ames) | 已完成待发布 |
-| B1 | 从一列数据里，能榨出几个特征？ | `feature_engineering/construction.py` | Titanic（OpenML 原始版） | 代码就绪，待写文章 |
-| B2 | 类别变量编码：One-Hot 之外的世界 | `feature_engineering/encoding.py` | Telco Customer Churn | 代码就绪，待写文章 |
-| B3 | 用 Pipeline 把特征工程和模型拧成一股绳 | `feature_engineering/pipeline_leakage.py` | Telco Customer Churn | 代码就绪，待写文章 |
+| B1 | 从一列数据里，能榨出几个特征？ | `feature_engineering/construction.py` | Titanic（OpenML 原始版） | 已完成待发布 |
+| B2 | 类别变量编码：One-Hot 之外的世界 | `feature_engineering/encoding.py` | Telco Customer Churn | 已完成待发布 |
+| B3 | 用 Pipeline 把特征工程和模型拧成一股绳 | `feature_engineering/pipeline_leakage.py` | Telco Customer Churn | 已完成待发布 |
 | C1 | 回归问题：从线性回归到正则化（Ridge/Lasso） | `modeling/`（待建） | House Prices (Ames) | 规划中 |
 | C2 | 分类问题：选算法不是看榜，是看场景 | `modeling/`（待建） | Telco Customer Churn | 规划中 |
 | C3 | 不均衡数据：当"坏人"只占 2% | `modeling/`（待建） | Credit Card Fraud Detection | 规划中 |
