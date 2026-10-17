@@ -33,3 +33,36 @@ def test_load_house_prices_from_cache(tmp_path):
     df = data_loader.load_house_prices(cache_dir=str(cache_dir), force_download=False)
     assert len(df) == 3
     assert "SalePrice" in df.columns
+
+
+def test_load_telco_churn_from_cache(tmp_path):
+    cache_dir = tmp_path
+    fixture = pd.DataFrame({
+        "gender": ["Female", "Male", "Female"],
+        "tenure": [1, 34, 2],
+        "Contract": ["Month-to-month", "One year", "Month-to-month"],
+        "MonthlyCharges": [29.85, 56.95, 53.85],
+        "TotalCharges": [29.85, 1889.5, 108.15],
+        "Churn": ["No", "No", "Yes"],
+    })
+    fixture.to_csv(cache_dir / "telco_churn.csv", index=False)
+    df = data_loader.load_telco_churn(cache_dir=str(cache_dir), force_download=False)
+    assert len(df) == 3
+    assert "Churn" in df.columns
+
+
+def test_load_titanic_raw_from_cache(tmp_path):
+    cache_dir = tmp_path
+    fixture = pd.DataFrame({
+        "name": ["Allen, Miss. Elisabeth Walton", "Allison, Master. Hudson Trevor"],
+        "cabin": ["B5", None],
+        "pclass": [1, 1],
+        "sex": ["female", "male"],
+        "age": [29.0, 0.9167],
+        "survived": [1, 1],
+    })
+    fixture.to_csv(cache_dir / "titanic_raw.csv", index=False)
+    df = data_loader.load_titanic_raw(cache_dir=str(cache_dir), force_download=False)
+    assert len(df) == 2
+    assert "name" in df.columns
+    assert "cabin" in df.columns
