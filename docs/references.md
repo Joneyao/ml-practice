@@ -28,3 +28,22 @@
 |--------|------|----------|--------|
 | Titanic | [Titanic - Machine Learning from Disaster](https://www.kaggle.com/c/titanic/)（Kaggle 公开数据集） | `seaborn.load_dataset("titanic")` 内置镜像，无需 Kaggle API 凭据 | A1 数据探查、A2 缺失值填补 |
 | House Prices (Ames) | Ames housing dataset（Kaggle House Prices 竞赛同源数据） | `sklearn.datasets.fetch_openml(data_id=42165, as_frame=True)` | A3 异常值检测与处理 |
+
+
+## 第二批补充（特征工程，阶段 B）
+
+**延续本仓库一贯原则：只借鉴思路和接口设计，代码自己从原理重新实现，不
+摘抄任何教程或开源项目源码。**
+
+| 文档 | 用途 |
+|------|------|
+| scikit-learn [Pipelines and composite estimators](https://scikit-learn.org/stable/modules/compose.html) | B3 `ColumnTransformer`/`Pipeline` 组合方式的核心依据 |
+| scikit-learn [Encoding categorical features](https://scikit-learn.org/stable/modules/preprocessing.html#encoding-categorical-features) | B2 `OneHotEncoder`/`LabelEncoder` 的接口参考 |
+| Abhishek Thakur《Approaching (Almost) Any Machine Learning Problem》 | 交叉验证与特征工程防泄漏思路，B3 揭示性时刻的方法论来源 |
+
+新增数据集出处：
+
+| 数据集 | 来源 | 获取方式 | 用在哪 |
+|--------|------|----------|--------|
+| Telco Customer Churn | [Kaggle: blastchar/telco-customer-churn](https://www.kaggle.com/datasets/blastchar/telco-customer-churn) | `sklearn.datasets.fetch_openml(data_id=42178, as_frame=True)`（OpenML 同源镜像，无需 Kaggle 凭据） | B2 类别编码、B3 Pipeline 数据泄漏复现 |
+| Titanic（原始版，含 name/cabin 文本列） | 同 [Titanic - Machine Learning from Disaster](https://www.kaggle.com/c/titanic/) | `sklearn.datasets.fetch_openml(data_id=40945, as_frame=True)` | B1 从文本列构造特征 |
