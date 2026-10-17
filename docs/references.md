@@ -65,3 +65,21 @@
 | 数据集 | 来源 | 获取方式 | 用在哪 |
 |--------|------|----------|--------|
 | Credit Card Fraud Detection | [Kaggle: mlg-ulb/creditcardfraud](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud) | `sklearn.datasets.fetch_openml(data_id=1597, as_frame=True)`（OpenML 同源镜像，无需凭据） | C3 不均衡分类 |
+
+
+## 第四批补充（调参评估与落地，阶段 D/E）
+
+**延续本仓库一贯原则：只借鉴思路和接口设计，代码自己从原理重新实现。**
+
+| 文档 | 用途 |
+|------|------|
+| scikit-learn [Cross-validation](https://scikit-learn.org/stable/modules/cross_validation.html) | D1 K-Fold/StratifiedKFold 依据 |
+| scikit-learn [Tuning hyper-parameters](https://scikit-learn.org/stable/modules/grid_search.html) | D2 Grid/RandomizedSearchCV 依据 |
+| [Optuna 官方文档](https://optuna.org/) | D2 文章概念性介绍贝叶斯优化（仓库不含 optuna 代码） |
+| scikit-learn [Model persistence](https://scikit-learn.org/stable/model_persistence.html) | E1 joblib 序列化依据 |
+| [FastAPI 官方文档](https://fastapi.tiangolo.com/) | E1 预测接口依据 |
+
+> **范围说明：** D2 仅用代码实现 Grid/RandomizedSearchCV 的对比；Optuna 作为
+> "第三条路"在文章里用对比表概念性介绍，不在仓库写 optuna 代码（避免为单个
+> 文章小点引入重型依赖）。E1 的 FastAPI 接口是**本地演示**，无鉴权/限流/HTTPS，
+> 生产部署需另加完整工程，文章会明确声明这一边界。
