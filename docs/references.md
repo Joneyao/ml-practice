@@ -83,3 +83,23 @@
 > "第三条路"在文章里用对比表概念性介绍，不在仓库写 optuna 代码（避免为单个
 > 文章小点引入重型依赖）。E1 的 FastAPI 接口是**本地演示**，无鉴权/限流/HTTPS，
 > 生产部署需另加完整工程，文章会明确声明这一边界。
+
+
+## 第五批补充（深度学习实战，阶段 F）
+
+**延续本仓库一贯原则：只借鉴思路和接口设计，代码自己从原理重新实现。**
+
+| 文档 | 用途 |
+|------|------|
+| PyTorch [60 Minute Blitz](https://docs.pytorch.org/tutorials/beginner/blitz/) | F1/F2 的 nn.Module/autograd/训练循环依据 |
+| PyTorch [训练分类器教程](https://docs.pytorch.org/tutorials/beginner/blitz/cifar10_tutorial.html) | F2 CNN 图像分类依据 |
+| 本仓库入门系列 `ml-from-scratch/neural_net/mlp_mnist.py` | F1 对照的手写 MLP 基线（同 8×8 digits、同结构） |
+
+> **F1 对照说明：** F1 用 PyTorch 重写入门系列手写的 MLP，刻意用同一份
+> sklearn 8×8 digits 数据和同一网络结构，验证框架版与手写版收敛行为一致——
+> 框架不是魔法，是把手写的前向/反向/更新做了工程化封装。
+>
+> **F2 数据集说明：** 设计文档允许用 CIFAR-10 或 Fashion-MNIST。实际实现选
+> Fashion-MNIST——它同样是 10 类图像分类、适合讲卷积和过拟合曲线，但体积只有
+> 约 30MB（CIFAR-10 约 170MB），在本环境下载可靠得多。Fashion-MNIST 是
+> 1 通道 28×28 灰度图，SmallCNN 的输入通道和全连接维度据此适配。

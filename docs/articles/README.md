@@ -1,8 +1,10 @@
 # 配套文章同步目录
 
 本目录存放《机器学习实战》系列文章的 markdown 同步副本（与公众号 `easy_ai` 双发）。
-文章写作走 writing-articles skill，完成后同步进本目录。当前仅为占位说明，尚无
-正文文件。
+文章写作走 writing-articles skill，完成后同步进本目录。
+
+**进度：14 篇全部完成（代码 + 文章），状态为"已完成待发布"，等待统一发布。**
+每篇文章的代码、配图数据均可追溯到本仓库对应模块的真实运行输出。
 
 ## 14 篇规划表
 
@@ -20,8 +22,8 @@
 | D1 | 交叉验证不是跑一遍就完事：K-Fold 的正确姿势 | `tuning_evaluation/cross_validation.py` | House Prices (Ames) | 已完成待发布 |
 | D2 | 调参的性价比：GridSearch、RandomSearch 还是贝叶斯优化 | `tuning_evaluation/hyperparam_search.py` | Telco Customer Churn | 已完成待发布 |
 | E1 | 训好的模型怎么用起来：从 pickle 到一个能调用的接口 | `deployment/train_and_save.py` + `deployment/app.py` | Telco Customer Churn | 已完成待发布 |
-| F1 | 从 sklearn 到 PyTorch：换个框架，同样的损失和梯度下降 | `deep_learning/`（待建） | MNIST | 规划中 |
-| F2 | 图像分类实战：CNN 入门与一个真实的小项目 | `deep_learning/`（待建） | CIFAR-10 / Fashion-MNIST | 规划中 |
+| F1 | 从 sklearn 到 PyTorch：换个框架，同样的损失和梯度下降 | `deep_learning/torch_mlp.py` | sklearn digits（8×8，对照手写 MLP） | 已完成待发布 |
+| F2 | 图像分类实战：CNN 入门与一个真实的小项目 | `deep_learning/cnn_image.py` | Fashion-MNIST（CIFAR-10 下载过慢，用设计文档允许的等价替代） | 已完成待发布 |
 
 详细大纲和每篇的揭示性时刻，参见设计文档
 `docs/superpowers/specs/2026-10-16-ml-practice-series-design.md`（主仓库）。
