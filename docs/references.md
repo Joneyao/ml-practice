@@ -47,3 +47,21 @@
 |--------|------|----------|--------|
 | Telco Customer Churn | [Kaggle: blastchar/telco-customer-churn](https://www.kaggle.com/datasets/blastchar/telco-customer-churn) | `sklearn.datasets.fetch_openml(data_id=42178, as_frame=True)`（OpenML 同源镜像，无需 Kaggle 凭据） | B2 类别编码、B3 Pipeline 数据泄漏复现 |
 | Titanic（原始版，含 name/cabin 文本列） | 同 [Titanic - Machine Learning from Disaster](https://www.kaggle.com/c/titanic/) | `sklearn.datasets.fetch_openml(data_id=40945, as_frame=True)` | B1 从文本列构造特征 |
+
+
+## 第三批补充（建模与算法选择，阶段 C）
+
+**延续本仓库一贯原则：只借鉴思路和接口设计，代码自己从原理重新实现。**
+
+| 文档 | 用途 |
+|------|------|
+| scikit-learn [Linear Models（Ridge/Lasso）](https://scikit-learn.org/stable/modules/linear_model.html) | C1 正则化回归依据 |
+| scikit-learn [Ensemble methods](https://scikit-learn.org/stable/modules/ensemble.html) | C2 RandomForest/GBDT 接口参考 |
+| imbalanced-learn [SMOTE 官方文档](https://imbalanced-learn.org/stable/references/generated/imblearn.over_sampling.SMOTE.html) | C3 过采样依据 |
+| scikit-learn [Metrics: precision/recall/ROC](https://scikit-learn.org/stable/modules/model_evaluation.html) | C3 不均衡评估指标依据 |
+
+新增数据集出处：
+
+| 数据集 | 来源 | 获取方式 | 用在哪 |
+|--------|------|----------|--------|
+| Credit Card Fraud Detection | [Kaggle: mlg-ulb/creditcardfraud](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud) | `sklearn.datasets.fetch_openml(data_id=1597, as_frame=True)`（OpenML 同源镜像，无需凭据） | C3 不均衡分类 |
