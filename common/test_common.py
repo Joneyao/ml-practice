@@ -66,3 +66,18 @@ def test_load_titanic_raw_from_cache(tmp_path):
     assert len(df) == 2
     assert "name" in df.columns
     assert "cabin" in df.columns
+
+
+def test_load_credit_fraud_from_cache(tmp_path):
+    cache_dir = tmp_path
+    fixture = pd.DataFrame({
+        "V1": [-1.2, 0.5, 2.1, -0.3],
+        "V2": [0.3, -1.1, 0.8, 0.1],
+        "Amount": [149.62, 2.69, 378.66, 12.99],
+        "Class": [0, 0, 1, 0],
+    })
+    fixture.to_csv(cache_dir / "credit_fraud.csv", index=False)
+    df = data_loader.load_credit_fraud(cache_dir=str(cache_dir), force_download=False)
+    assert len(df) == 4
+    assert "Class" in df.columns
+    assert df["Class"].dtype.kind == "i"  # 整数类型

@@ -80,3 +80,24 @@ def load_titanic_raw(cache_dir="data", force_download=True):
     df["survived"] = df["survived"].astype(int)
     df.to_csv(cache_path, index=False)
     return df
+
+
+def load_credit_fraud(cache_dir="data", force_download=True):
+    """加载 Credit Card Fraud Detection 数据集（OpenML data_id=1597）。
+    优先用缓存，没有缓存且允许下载时联网获取。Class 列统一转为整数 0/1。
+    """
+    os.makedirs(cache_dir, exist_ok=True)
+    cache_path = os.path.join(cache_dir, "credit_fraud.csv")
+    if os.path.exists(cache_path):
+        return pd.read_csv(cache_path)
+    if not force_download:
+        raise FileNotFoundError(f"缓存不存在且禁止下载: {cache_path}")
+    from sklearn.datasets import fetch_openml
+    bunch = fetch_openml(data_id=1597, as_frame=True)
+    df = bunch.frame
+    # Class 列可能是带引号字符串或 category，统一转整数
+    df["Class"] = pd.to_numeric(
+        df["Class"].astype(str).str.strip("'\""), errors="coerce"
+    ).astype(int)
+    df.to_csv(cache_path, index=False)
+    return df
