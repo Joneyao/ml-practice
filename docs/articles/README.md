@@ -17,9 +17,9 @@
 | C1 | 回归问题：从线性回归到正则化（Ridge/Lasso） | `modeling/regression.py` | House Prices (Ames) | 已完成待发布 |
 | C2 | 分类问题：选算法不是看榜，是看场景 | `modeling/classification.py` | Telco Customer Churn | 已完成待发布 |
 | C3 | 不均衡数据：当"坏人"只占 0.17% | `modeling/imbalance.py` | Credit Card Fraud Detection | 已完成待发布 |
-| D1 | 交叉验证不是跑一遍就完事：K-Fold 的正确姿势 | `tuning_evaluation/cross_validation.py` | House Prices (Ames) | 代码就绪，待写文章 |
-| D2 | 调参的性价比：GridSearch、RandomSearch 还是贝叶斯优化 | `tuning_evaluation/hyperparam_search.py` | Telco Customer Churn | 代码就绪，待写文章 |
-| E1 | 训好的模型怎么用起来：从 pickle 到一个能调用的接口 | `deployment/train_and_save.py` + `deployment/app.py` | Telco Customer Churn | 代码就绪，待写文章 |
+| D1 | 交叉验证不是跑一遍就完事：K-Fold 的正确姿势 | `tuning_evaluation/cross_validation.py` | House Prices (Ames) | 已完成待发布 |
+| D2 | 调参的性价比：GridSearch、RandomSearch 还是贝叶斯优化 | `tuning_evaluation/hyperparam_search.py` | Telco Customer Churn | 已完成待发布 |
+| E1 | 训好的模型怎么用起来：从 pickle 到一个能调用的接口 | `deployment/train_and_save.py` + `deployment/app.py` | Telco Customer Churn | 已完成待发布 |
 | F1 | 从 sklearn 到 PyTorch：换个框架，同样的损失和梯度下降 | `deep_learning/`（待建） | MNIST | 规划中 |
 | F2 | 图像分类实战：CNN 入门与一个真实的小项目 | `deep_learning/`（待建） | CIFAR-10 / Fashion-MNIST | 规划中 |
 
