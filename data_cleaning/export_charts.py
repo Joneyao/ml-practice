@@ -47,7 +47,7 @@ def export_a1_naive_vs_honest():
     fig, ax = plt.subplots(figsize=(7, 4.5))
     ax.bar(rates.index, rates.values, color=["#636e72", "#00b894", "#d63031"])
     ax.set_ylabel("存活率")
-    ax.set_title(f"被丢弃样本的存活率明显偏高（naive CV 分数={naive_score:.3f}）")
+    ax.set_title(f"被丢弃样本的存活率明显偏低（naive CV 分数={naive_score:.3f}）")
     return save_fig(fig, OUT, "naive_vs_honest.png")
 
 
