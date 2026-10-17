@@ -8,9 +8,9 @@
 
 | 编号 | 标题 | 代码模块 | 数据集 | 状态 |
 |------|------|----------|--------|------|
-| A1 | 别急着建模：一份真实数据能有多脏 | `data_cleaning/explore.py` | Titanic | 代码就绪，待写文章 |
-| A2 | 缺失值不是删掉就完事：填补策略的代价 | `data_cleaning/imputation.py` | Titanic | 文章已写（见 `article_02_imputation-strategy-cost.md`） |
-| A3 | 异常值：噪声，还是真实的极端情况？ | `data_cleaning/outliers.py` | House Prices (Ames) | 文章已完成 |
+| A1 | 别急着建模：一份真实数据能有多脏 | `data_cleaning/explore.py` | Titanic | 已完成待发布 |
+| A2 | 缺失值不是删掉就完事：填补策略的代价 | `data_cleaning/imputation.py` | Titanic | 已完成待发布 |
+| A3 | 异常值：噪声，还是真实的极端情况？ | `data_cleaning/outliers.py` | House Prices (Ames) | 已完成待发布 |
 | B1 | 从一列数据里，能榨出几个特征？ | `feature_engineering/`（待建） | Titanic | 规划中 |
 | B2 | 类别变量编码：One-Hot 之外的世界 | `feature_engineering/`（待建） | Telco Customer Churn | 规划中 |
 | B3 | 用 Pipeline 把特征工程和模型拧成一股绳 | `feature_engineering/`（待建） | Telco Customer Churn | 规划中 |
